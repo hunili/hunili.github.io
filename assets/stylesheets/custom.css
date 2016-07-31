@@ -8,9 +8,9 @@ textarea {
 body {
   background: #000;
   margin: 0;
-  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 14px;
   font-weight: 300;
+  font-family: 'Roboto', sans-serif;
 }
 ::-moz-selection {
     background: #fff;
@@ -23,9 +23,90 @@ body {
     text-shadow: none;
 }
 
-.home {
+.nav-bar {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0;
   width: 100%;
   height: 100vh;
+  top:0;
+  left:0;
+  transition: all .4s;
+  -moz-transition: all .4s;
+  -webkit-transition: all .4s;
+}
+.nav-bar.open {
+  opacity: 1;
+  background: #fff;
+  z-index: 999;
+}
+.close-button {
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+  top:15px;
+}
+.close-button i{
+  border-radius: 50%;
+  background: #000;
+  color: #fff;
+  line-height: 24px;
+  height: 24px;
+  width: 24px;
+  font-size: 14px;
+  text-align: center;
+  transition: all .2s;
+  -moz-transition: all .2s;
+  -webkit-transition: all .2s;
+}
+.close-button:hover i{
+  background: #a7d6dc;
+}
+.navinner {width: 100%; max-width: 1200px;text-align: right;}
+.top-menu {
+  padding: 0;
+  margin: 0;
+  margin-top: 8vh;
+  margin-bottom: calc(12vh - 48px);
+}
+.top-menu li{
+  display: block;
+}
+.top-menu li a{
+  display: inline-block;
+  color: #000;
+  padding: 0;
+  font-size: 64px;
+  font-weight: 900;
+  text-decoration: none;
+  letter-spacing: 4vw;
+  line-height: 20vh;
+  transition: all .2s;
+  -moz-transition: all .2s;
+  -webkit-transition: all .2s;
+}
+.top-menu li a:hover{color:#a7d6dc;}
+.social-menu {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+.social-menu li{display: inline-block;}
+.social-menu li a{color: #dedede;font-size: 24px;padding: 0 5px;}
+.social-menu li:last-child a{padding-right: 4vw;}
+.social-menu i{
+  transition: all .5s;
+  -moz-transition: all .5s;
+  -webkit-transition: all .5s;
+}
+
+.home {
+  background: #000;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  position: relative;
 }
 
 .container {
@@ -45,7 +126,9 @@ body {
   padding: 0;
   margin: 0;
   cursor:pointer;
+  z-index: 99;
 }
+#sceneright {z-index: 98;}
 .border {
   display: block;
   height: 94px;
@@ -78,6 +161,31 @@ body {
   -moz-transition: all .2s;
   -webkit-transition: all .2s;
   z-index: 90;
+}
+.scenewrap {
+  display: block;
+  height: 96px;
+  width: 96px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  transition: all .02s;
+  -moz-transition: all .02s;
+  -webkit-transition: all .02s;
+}
+.scene:hover .scenewrap {
+  -webkit-transform:scale(1.2,1.2);
+  -ms-transform:scale(1.2,1.2);
+  transform:scale(1.2,1.2);
+}
+.scenewrap.open {
+  position: absolute;
+  top:-100vw;
+  left:-100vw;
+  background: #fff;
+  width: 200vw;
+  height: 200vw;
+  z-index: 998;
 }
 .scene:hover .circle {
   -webkit-transform:scale(1.2,1.2);
@@ -260,12 +368,24 @@ i.pupil {
   -moz-transition: all .5s;
   -webkit-transition: all .5s;
 }
-.item i.fa-dribbble:hover{color: #ea4c89;}
-.item i.fa-twitter:hover{color: #00aced;}
-.item i.fa-instagram:hover{color: #125688;}
-.item i.fa-github:hover{color: #4183c4;}
-.item i.fa-snapchat-ghost:hover{color: #fffc00;}
-.item i.fa-linkedin:hover{color: #0077b5;}
+i.fa-dribbble:hover{color: #ea4c89;}
+i.fa-instagram:hover{
+  background: #f9984c;
+  background: -moz-linear-gradient(45deg, #f9984c 0%, #d55262 25%, #a03893 50%, #723eb5 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #f9984c 0%,#d55262 25%,#a03893 50%,#723eb5 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #f9984c 0%,#d55262 25%,#a03893 50%,#723eb5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9984c', endColorstr='#723eb5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+i.fa-500px:hover{color: #079adf;}
+i.fa-medium:hover{color: #00ab6b;}
+i.fa-twitter:hover{color: #00aced;}
+i.fa-github:hover{color: #4183c4;}
+i.fa-snapchat-ghost:hover{color: #fffc00;}
+i.fa-linkedin:hover{color: #0077b5;}
 .flickity-prev-next-button {
   width: 10px;
   height: 10px;

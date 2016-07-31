@@ -28,4 +28,10 @@ $(document).ready(function(){
 	  // setGallerySize: true,
 	  // watchCSS: false
 	});
+	$(".scenewrap").click(
+		function(){	$(".nav-bar").addClass("open");$(".scenewrap").addClass("open"); }
+	);
+	$(".close-button").click(
+		function(){	$(".nav-bar").removeClass("open");$(".scenewrap").removeClass("open"); }
+	);
 });
