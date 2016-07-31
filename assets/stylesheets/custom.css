@@ -22,7 +22,7 @@ body {
     color: #000;
     text-shadow: none;
 }
-
+.wrapper {overflow: hidden;}
 .nav-bar {
   position: absolute;
   z-index: 1;
