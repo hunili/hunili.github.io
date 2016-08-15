@@ -22,7 +22,7 @@ body {
     color: #000;
     text-shadow: none;
 }
-.wrapper {overflow: hidden;}
+.wrapper {overflow: hidden;background: #000;}
 .nav-bar {
   position: absolute;
   z-index: -1;
@@ -63,7 +63,7 @@ body {
 .close-button:hover i{
   background: #a7d6dc;
 }
-.navinner {width: 100%; max-width: 1200px;text-align: right;}
+.navinner {width: 100%; max-width: 1200px;text-align: right;margin: 0 auto;}
 .top-menu {
   padding: 0;
   margin: 0;
@@ -102,7 +102,6 @@ body {
 }
 
 .home {
-  background: #000;
   width: 100%;
   height: 100vh;
   z-index: 1;
@@ -394,6 +393,34 @@ i.fa-linkedin:hover{color: #0077b5;}
 }
 .flickity-prev-next-button.previous {left: 5px;}
 .flickity-prev-next-button.next {right: 5px;}
+
+/* About */
+
+.about {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #000000 , #53346D); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #000000 , #53346D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.about h2 {
+  font-size: 144px;
+}
+.mountain {
+  position: absolute;
+  top: 33vh;
+  left: 0;
+  right: 0;
+  background: #000;
+  z-index: 2;
+  width: 100vw;
+  height: 67vh;
+}
 
 
 @media screen and (max-width:920px) {
