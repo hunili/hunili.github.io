@@ -361,7 +361,7 @@ i.pupil {
   top: 32px;
   left: 32px;
 }
-.scene:hover .social .flickitywrapper{left:0;}
+.scene:hover .social .flickitywrapper, .scene:checked .social .flickitywrapper{left:0;}
 .item i{
   transition: all .5s;
   -moz-transition: all .5s;
