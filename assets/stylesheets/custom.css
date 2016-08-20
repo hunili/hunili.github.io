@@ -88,13 +88,12 @@ body {
 }
 .top-menu li a:hover{color:#a7d6dc;}
 .social-menu {
-  padding: 0;
+  padding: 0  4vw 0 0;
   margin: 0;
   display: inline-block;
 }
 .social-menu li{display: inline-block;}
 .social-menu li a{color: #cecece;font-size: 24px;padding: 0 5px;}
-.social-menu li:last-child a{padding-right: 4vw;}
 .social-menu i{
   transition: all .5s;
   -moz-transition: all .5s;

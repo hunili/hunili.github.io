@@ -1,11 +1,11 @@
 $(document).ready(function(){
 	$('#scene').parallax({
-	invertX: false,
-	invertY: false
+		invertX: false,
+		invertY: false
 	});
 	$('#sceneright').parallax({
-	invertX: false,
-	invertY: false
+		invertX: false,
+		invertY: false
 	});
 	$('#scene404').parallax();
 	$('.flickity').flickity({
@@ -28,10 +28,10 @@ $(document).ready(function(){
 	  // setGallerySize: true,
 	  // watchCSS: false
 	});
-	$(".scenewrap").click(
-		function(){	$(".nav-bar").addClass("open");$(".scenewrap").addClass("open"); }
-	);
-	$(".close-button").click(
-		function(){	$(".nav-bar").removeClass("open");$(".scenewrap").removeClass("open"); }
-	);
+	$(".scenewrap").click(function(){
+		$(".nav-bar").addClass("open");$(".scenewrap").addClass("open"); 
+	});
+	$(".close-button").click(function(){
+		$(".nav-bar").removeClass("open");$(".scenewrap").removeClass("open");
+	});
 });
