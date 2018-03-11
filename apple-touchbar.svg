@@ -5,7 +5,13 @@
 <style type="text/css">
 	.st0{fill:#000000;
 	  opacity:1;
+	-webkit-animation: eye 4s steps(4, end) infinite;
 	  animation: eye 4s steps(4, end) infinite;
+	}
+	@-webkit-keyframes eye {
+	  to {
+	    opacity:0;
+	  }
 	}
 	@keyframes eye {
 	  to {
