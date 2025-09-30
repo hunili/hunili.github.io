@@ -1,8 +1,0 @@
-User-agent: *
-Disallow: /?ref=
-Disallow: /flash/
-
-User-agent: googlebot
-Disallow: /*?ref=*
-Disallow: /*.swf$
-Disallow: /flash/
